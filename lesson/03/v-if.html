@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="number" v-model="num">
+        <div v-if="num==1">内容1</div>
+        <div v-else-if="num==2">内容2</div>
+        <div v-else>内容3</div>
+        <!-- if,else if,else -->
+    </div>
+    <script>
+        var vm=new  Vue({
+            el:"#app",
+            data:{
+                num:1
+            }
+        })
+    </script>
+</body>
+</html>

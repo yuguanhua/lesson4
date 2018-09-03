@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>{{title}}</h1>
+        <ul>
+            <li v-for="(user,index) in users">
+                <span>{{user.name}}</span>
+                <span>{{user.sex}}</span>
+                <span>{{user.age}}</span>
+                <button v-on:click="del(user,index,$event)">删除</button>
+        </ul>
+    </div>
+    <script>
+        const vm= new Vue({
+            el:"#app",
+            data:{
+                title:'title',
+                users:[
+                    {
+                        name:'余观华',
+                        sex:'女',
+                        age:13,
+                        children:[
+                            {
+                                name:'余观华孩子',
+                                sex:'女',
+                                age:13
+                            },
+                            {
+                                name:'余观华孩子',
+                                sex:'女',
+                                age:13
+                            },
+                            {
+                                name:'余观华孩子',
+                                sex:'女',
+                                age:13
+                            }
+                        ]
+                    },
+                    {
+                        name:'余观华1',
+                        sex:'女',
+                        age:13
+                    },
+                    {
+                        name:'余观华2',
+                        sex:'女',
+                        age:13
+                    },
+                    {
+                        name:'余观华3',
+                        sex:'女',
+                        age:13
+                    }
+                ]
+            },
+            methods:{
+               del(user,index,e){
+                    // console.log(user)
+                    console.log(e);
+                //  this.users.splice(index,1)
+               }
+            }
+        })
+    </script>
+</body>
+</html>

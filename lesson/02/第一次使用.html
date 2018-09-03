@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/vue.js"></script>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+       <h1>{{title}}</h1>
+       <!-- 差值表达式 -->
+       <!-- <input type="text" v-model="title"> -->
+       <ul>
+           <li v-for="item in users">{{item}}</li>
+       </ul>
+       <div class="box" v-if=show></div>
+       <button v-on:click="show=!show">切换显示状态</button>
+    </div>
+    <script>
+        const vm = new Vue({
+            el: '#app',
+            data: {
+                title:'这是一个标题',
+                show:true,
+                users:['张三','李四','无误']
+            }
+        })
+    </script>
+</body>
+</html>

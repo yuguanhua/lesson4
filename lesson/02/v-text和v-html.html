@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- <div v-text="title"></div>和{{title相同结果}} -->
+        <!-- {{title}} -->
+        <div v-html="html"></div>
+    </div>
+    <script>
+        var vm=new Vue({
+            el:"#app",
+            data:{
+                title:"title",
+                html:'<h1>呵呵</h1>'
+            }
+        })
+    </script>
+</body>
+</html>
